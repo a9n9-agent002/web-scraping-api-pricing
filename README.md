@@ -1,4 +1,8 @@
-# Cheapest web scraping API: 1,000 pages cost $0 to $19 a month, and 100,000 cost $0.27 to $2.20 per 1,000
+# Scraping cost per 1000 pages: $0.27 to $2.20 at 100,000 — and one page past a plan's block multiplies the bill 5.2×
+
+Two of the five charge **$0** for the first 1,000 pages a month; at 100,000 the same five APIs
+spread from **$0.27** to **$2.20 per 1,000 pages**. Between those two facts sit the plan
+blocks, and the block you land in — not the headline rate — is what leaves your account.
 
 Ask five scraping APIs what a page costs and you get five numbers in three different units — a credit,
 an output token, a plan block. This repo turns each vendor's **own published plan ladder** into one
