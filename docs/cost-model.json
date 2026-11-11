@@ -1,0 +1,211 @@
+{
+ "measured_at_utc": "2026-11-10T19:03Z",
+ "tokeniser": "tiktoken cl100k_base",
+ "firecrawl_plans_source": "https://www.firecrawl.dev/pricing (read 2026-11-10)",
+ "firecrawl_billing_rule_quote": "A scrape that returns no result is not charged. A page that responds with an error status such as 403 or 404 is still returned to you and costs 1 credit.",
+ "firecrawl_format_rule_quote": "On Scrape and Crawl, the JSON, Question, and Highlight formats add 4 credits per page",
+ "model": {
+  "id": "deepseek/deepseek-v4.1-flash-1017",
+  "source": "Novita published list, read 2026-11-08 (stage/costcalc dataset)",
+  "usd_per_1m_input": 0.3,
+  "usd_per_1m_output": 1.2,
+  "usd_per_1m_cache_read": 0.006
+ },
+ "plans": {
+  "Free": {
+   "usd_per_credit": 0.0,
+   "plain_page_usd": 0.0,
+   "json_page_usd": 0.0,
+   "json_premium_usd": 0.0
+  },
+  "Hobby": {
+   "usd_per_credit": 0.0038,
+   "plain_page_usd": 0.0038,
+   "json_page_usd": 0.019,
+   "json_premium_usd": 0.0152
+  },
+  "Standard": {
+   "usd_per_credit": 0.00099,
+   "plain_page_usd": 0.00099,
+   "json_page_usd": 0.00495,
+   "json_premium_usd": 0.00396
+  },
+  "Growth": {
+   "usd_per_credit": 0.000798,
+   "plain_page_usd": 0.000798,
+   "json_page_usd": 0.00399,
+   "json_premium_usd": 0.003192
+  },
+  "Scale": {
+   "usd_per_credit": 0.000749,
+   "plain_page_usd": 0.000749,
+   "json_page_usd": 0.003745,
+   "json_premium_usd": 0.002996
+  }
+ },
+ "scenarios": [
+  {
+   "name": "catalogue_40_products",
+   "page_chars": 2555,
+   "schema_tokens": 81,
+   "page_tokens": 769,
+   "output_tokens": 1243,
+   "input_tokens_total": 850,
+   "local_structuring_usd_per_page": 0.0017466,
+   "md_sha256": "5fae182d3eb506725ad830288b5c2e954b6c4a4d2acea65f969cfe6d8ab32a5e",
+   "out_sha256": "1043b4dd9f1c16b8a6db76af94b012185db5375f1dbae10aa0e1f4975e7356b3",
+   "by_plan": {
+    "Free": {
+     "markdown_first_usd": 0.0017466,
+     "json_mode_usd": 0.0,
+     "markdown_first_is_cheaper": false
+    },
+    "Hobby": {
+     "markdown_first_usd": 0.0055466,
+     "json_mode_usd": 0.019,
+     "ratio_md_over_json": 0.2919,
+     "markdown_first_is_cheaper": true
+    },
+    "Standard": {
+     "markdown_first_usd": 0.0027366,
+     "json_mode_usd": 0.00495,
+     "ratio_md_over_json": 0.5528,
+     "markdown_first_is_cheaper": true
+    },
+    "Growth": {
+     "markdown_first_usd": 0.0025446,
+     "json_mode_usd": 0.00399,
+     "ratio_md_over_json": 0.6377,
+     "markdown_first_is_cheaper": true
+    },
+    "Scale": {
+     "markdown_first_usd": 0.0024956,
+     "json_mode_usd": 0.003745,
+     "ratio_md_over_json": 0.6664,
+     "markdown_first_is_cheaper": true
+    }
+   },
+   "breakeven_output_tokens": {
+    "Free": null,
+    "Hobby": 12454,
+    "Standard": 3088,
+    "Growth": 2448,
+    "Scale": 2284
+   }
+  },
+  {
+   "name": "docs_pricing_page",
+   "page_chars": 23397,
+   "schema_tokens": 101,
+   "page_tokens": 5921,
+   "output_tokens": 249,
+   "input_tokens_total": 6022,
+   "local_structuring_usd_per_page": 0.0021054,
+   "md_sha256": "eb70a12e9adbacf40bfd7e3860af64c93207d312d128ad27eac201abfa667c76",
+   "out_sha256": "a2fd4774b3abd20aafc8b179c31f6de4f011cb0b0ec14656c4e4f1584ed0fb1a",
+   "by_plan": {
+    "Free": {
+     "markdown_first_usd": 0.0021054,
+     "json_mode_usd": 0.0,
+     "markdown_first_is_cheaper": false
+    },
+    "Hobby": {
+     "markdown_first_usd": 0.0059054,
+     "json_mode_usd": 0.019,
+     "ratio_md_over_json": 0.3108,
+     "markdown_first_is_cheaper": true
+    },
+    "Standard": {
+     "markdown_first_usd": 0.0030954,
+     "json_mode_usd": 0.00495,
+     "ratio_md_over_json": 0.6253,
+     "markdown_first_is_cheaper": true
+    },
+    "Growth": {
+     "markdown_first_usd": 0.0029034,
+     "json_mode_usd": 0.00399,
+     "ratio_md_over_json": 0.7277,
+     "markdown_first_is_cheaper": true
+    },
+    "Scale": {
+     "markdown_first_usd": 0.0028544,
+     "json_mode_usd": 0.003745,
+     "ratio_md_over_json": 0.7622,
+     "markdown_first_is_cheaper": true
+    }
+   },
+   "breakeven_output_tokens": {
+    "Free": null,
+    "Hobby": 11161,
+    "Standard": 1794,
+    "Growth": 1154,
+    "Scale": 991
+   }
+  }
+ ],
+ "local_structuring_ref": "catalogue_40_products scenario",
+ "volume_blocks": {
+  "20000": {
+   "json_plan": "Standard",
+   "json_plan_usd_monthly": 99,
+   "plain_plan": "Standard",
+   "plain_plan_usd_monthly": 99,
+   "markdown_first_total_usd": 133.93,
+   "json_is_cheaper": true,
+   "saving_markdown_first_usd": -34.93,
+   "saving_markdown_first_usd_per_year": -419.18,
+   "markdown_first_multiple": 0.74,
+   "same_block": true
+  },
+  "60000": {
+   "json_plan": "Growth",
+   "json_plan_usd_monthly": 399,
+   "plain_plan": "Standard",
+   "plain_plan_usd_monthly": 99,
+   "markdown_first_total_usd": 203.8,
+   "json_is_cheaper": false,
+   "saving_markdown_first_usd": 195.2,
+   "saving_markdown_first_usd_per_year": 2342.45,
+   "markdown_first_multiple": 1.96,
+   "same_block": false
+  },
+  "100000": {
+   "json_plan": "Growth",
+   "json_plan_usd_monthly": 399,
+   "plain_plan": "Standard",
+   "plain_plan_usd_monthly": 99,
+   "markdown_first_total_usd": 273.66,
+   "json_is_cheaper": false,
+   "saving_markdown_first_usd": 125.34,
+   "saving_markdown_first_usd_per_year": 1504.08,
+   "markdown_first_multiple": 1.46,
+   "same_block": false
+  }
+ },
+ "success_rate_sample": {
+  "value": 0.6047,
+  "provenance": "third-party benchmark README quoted in README.md; not re-measured"
+ },
+ "effective_cost_per_usable_page": {
+  "Hobby": {
+   "plain_per_usable_page_usd": 0.006284,
+   "json_per_usable_page_usd": 0.031421,
+   "multiple_over_plain_headline": 1.6537
+  },
+  "Standard": {
+   "plain_per_usable_page_usd": 0.001637,
+   "json_per_usable_page_usd": 0.008186,
+   "multiple_over_plain_headline": 1.6537
+  },
+  "Growth": {
+   "plain_per_usable_page_usd": 0.00132,
+   "json_per_usable_page_usd": 0.006598,
+   "multiple_over_plain_headline": 1.6537
+  },
+  "Scale": {
+   "plain_per_usable_page_usd": 0.001239,
+   "json_per_usable_page_usd": 0.006193,
+   "multiple_over_plain_headline": 1.6537
+  }
+ }
+}

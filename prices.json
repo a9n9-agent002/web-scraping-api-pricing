@@ -1,0 +1,73 @@
+{
+  "as_of": "2026-11-10",
+  "read_at": "2026-11-10T00:20Z",
+  "purpose": "List prices read from each vendor's own pricing page, for computing what 1,000 / 10,000 / 50,000 / 100,000 pages cost per month. Price only: anti-bot success rate, latency and output quality are NOT priced here and no claim is made about them.",
+  "basis": "one page fetched and returned as Markdown on the vendor's cheapest plan that COVERS the volume; where a format or a render costs more credits per page, that multiplier is used instead of the headline rate; the monthly-billed price is used unless noted",
+  "providers": {
+    "firecrawl": {
+      "source": "https://www.firecrawl.dev/pricing",
+      "read_at": "2026-11-10T00:20Z",
+      "quote": "On Scrape and Crawl, the JSON, Question, and Highlight formats add 4 credits per page",
+      "plans_monthly": [
+        {"name": "Free", "usd": 0, "credits": 1000},
+        {"name": "Hobby", "usd": 19, "credits": 5000},
+        {"name": "Standard", "usd": 99, "credits": 100000},
+        {"name": "Growth", "usd": 399, "credits": 500000},
+        {"name": "Scale", "usd": 749, "credits": 1000000}
+      ],
+      "credits_per_page": {"basic": 1, "json": 5, "search_result": 0.2},
+      "notes": ["Markdown/HTML scrape or crawl page = 1 credit", "JSON, Question and Highlight formats add 4 credits per page = 5 credits", "search = 2 credits per 10 results"]
+    },
+    "scrapingbee": {
+      "source": "https://www.scrapingbee.com/pricing/",
+      "read_at": "2026-11-09T02:45Z",
+      "plans_monthly": [
+        {"name": "Hobby", "usd": 19, "credits": 75000},
+        {"name": "Freelance", "usd": 49, "credits": 250000},
+        {"name": "Startup", "usd": 99, "credits": 1000000},
+        {"name": "Business", "usd": 249, "credits": 3000000},
+        {"name": "Business +", "usd": 599, "credits": 8000000}
+      ],
+      "credits_per_page": {"basic": 1, "render": 5, "premium_proxy": 10},
+      "notes": ["a plain request is 1 credit", "JS rendering is 5 credits per successful request", "premium proxies are 10 or 25 credits depending on JS rendering"]
+    },
+    "crawl4ai_cloud": {
+      "source": "https://crawl4ai.com/",
+      "read_at": "2026-11-09T02:50Z",
+      "credit_usd": 0.001,
+      "plans_monthly": [
+        {"name": "Starter", "usd": 10, "credits": 20000},
+        {"name": "Pro", "usd": 82.5, "credits": 125000},
+        {"name": "Scale", "usd": 415.83, "credits": 750000}
+      ],
+      "credits_per_page": {"basic": 0.5, "render": 1, "hard_site": 2},
+      "notes": ["hosted plan; the library itself is Apache-2.0 and free to self-host", "1 credit = $0.001 at the published base rate", "page 0.5 credit, real browser 1, hard site 2"]
+    },
+    "tavily": {
+      "source": "https://www.tavily.com/pricing",
+      "read_at": "2026-11-09T23:07Z",
+      "plans_monthly": [
+        {"name": "Researcher (free)", "usd": 0, "credits": 1000},
+        {"name": "Project", "usd": 30, "credits": 4000},
+        {"name": "Bootstrap", "usd": 100, "credits": 15000},
+        {"name": "Startup", "usd": 220, "credits": 38000},
+        {"name": "Growth", "usd": 500, "credits": 100000}
+      ],
+      "credits_per_page": {"crawl": 0.3, "basic": 0.2},
+      "notes": ["crawl = map (0.1 credit per page) + extract (0.2 credit per page) = 0.3 credit per page", "search = 1 credit basic, 2 advanced", "credits reset on the 1st of the calendar month"]
+    },
+    "jina_reader": {
+      "source": "https://jina.ai/reader/",
+      "read_at": "2026-11-09T02:45Z",
+      "billing_unit": "output tokens, counted from the response",
+      "usd_per_1m_tokens": 0.05,
+      "free_tokens_with_key": 10000000,
+      "measured_tokens_per_page": [
+        {"url": "https://www.firecrawl.dev/pricing", "tokens": 2524},
+        {"url": "https://news.ycombinator.com", "tokens": 5341},
+        {"url": "https://en.wikipedia.org/wiki/Web_scraping", "tokens": 12603}
+      ],
+      "notes": ["keyless: prepend https://r.jina.ai/ to a URL, rate-limited", "a key raises the limit and bills tokens on content length", "ReaderLM/Reader model weights are CC-BY-NC 4.0, so commercial production use of the models needs a separate licence"]
+    }
+  }
+}
